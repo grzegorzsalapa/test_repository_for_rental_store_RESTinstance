@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230323 12:45:56.196" rpa="false" schemaversion="3">
+<suite id="s1" name="Atest" source="/home/greg/Programming/Git/test_repository_for_rental_store/atest">
+<suite id="s1-s1" name="Rental Store Tests" source="/home/greg/Programming/Git/test_repository_for_rental_store/atest/rental_store_tests.robot">
+<test id="s1-s1-t1" name="POST to create new user" line="6">
+<kw name="POST" library="REST">
+<arg>/customers/add</arg>
+<tag>http</tag>
+<doc>*Sends a POST request to the endpoint.*</doc>
+<status status="PASS" starttime="20230323 12:45:56.460" endtime="20230323 12:45:56.465"/>
+</kw>
+<kw name="Integer" library="REST">
+<arg>response status</arg>
+<arg>201</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON integer.*</doc>
+<status status="PASS" starttime="20230323 12:45:56.465" endtime="20230323 12:45:56.468"/>
+</kw>
+<kw name="Integer" library="REST">
+<arg>response body id</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON integer.*</doc>
+<status status="PASS" starttime="20230323 12:45:56.468" endtime="20230323 12:45:56.469"/>
+</kw>
+<kw name="Array" library="REST">
+<arg>response body rentals</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON array.*</doc>
+<status status="PASS" starttime="20230323 12:45:56.469" endtime="20230323 12:45:56.471"/>
+</kw>
+<kw name="Output" library="REST">
+<arg>response</arg>
+<tag>I/O</tag>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<msg timestamp="20230323 12:45:56.471" level="INFO">
+{
+    "seconds": 0.00189,
+    "status": 201,
+    "reason": "Created",
+    "body": {
+        "id": 16,
+        "rentals": []
+    },
+    "headers": {
+        "date": "Thu, 23 Mar 2023 11:45:55 GMT",
+        "server": "uvicorn",
+        "content-length": "22",
+        "content-type": "application/json"
+    }
+}</msg>
+<status status="PASS" starttime="20230323 12:45:56.471" endtime="20230323 12:45:56.475"/>
+</kw>
+<status status="PASS" starttime="20230323 12:45:56.459" endtime="20230323 12:45:56.475"/>
+</test>
+<status status="PASS" starttime="20230323 12:45:56.214" endtime="20230323 12:45:56.476"/>
+</suite>
+<status status="PASS" starttime="20230323 12:45:56.197" endtime="20230323 12:45:56.476"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Atest">Atest</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Rental Store Tests">Atest.Rental Store Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
