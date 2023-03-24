@@ -30,3 +30,8 @@ GET customer to check their Rentals
     Integer     response status                 200
     Array       response body rentals
     Output      response
+
+POST to return film rented by customer
+    POST        /films/return                   ${CURDIR}/return_request_1.json
+    Integer     response status                 200
+    Output      response
