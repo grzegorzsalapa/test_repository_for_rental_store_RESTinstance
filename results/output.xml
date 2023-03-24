@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230324 11:44:50.183" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230324 11:57:06.584" rpa="false" schemaversion="3">
 <suite id="s1" name="Atest" source="/home/greg/Programming/Git/test_repository_for_rental_store/atest">
 <suite id="s1-s1" name="Rental Store Tests" source="/home/greg/Programming/Git/test_repository_for_rental_store/atest/rental_store_tests.robot">
 <test id="s1-s1-t1" name="POST to create a new customer" line="6">
@@ -7,34 +7,34 @@
 <arg>/customers/add</arg>
 <tag>http</tag>
 <doc>*Sends a POST request to the endpoint.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.397" endtime="20230324 11:44:50.407"/>
+<status status="PASS" starttime="20230324 11:57:06.793" endtime="20230324 11:57:06.806"/>
 </kw>
 <kw name="Integer" library="REST">
 <arg>response status</arg>
 <arg>201</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON integer.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.407" endtime="20230324 11:44:50.410"/>
+<status status="PASS" starttime="20230324 11:57:06.806" endtime="20230324 11:57:06.810"/>
 </kw>
 <kw name="Integer" library="REST">
 <arg>response body id</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON integer.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.410" endtime="20230324 11:44:50.411"/>
+<status status="PASS" starttime="20230324 11:57:06.811" endtime="20230324 11:57:06.813"/>
 </kw>
 <kw name="Array" library="REST">
 <arg>response body rentals</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON array.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.411" endtime="20230324 11:44:50.412"/>
+<status status="PASS" starttime="20230324 11:57:06.813" endtime="20230324 11:57:06.814"/>
 </kw>
 <kw name="Output" library="REST">
 <arg>response</arg>
 <tag>I/O</tag>
 <doc>*Outputs JSON to terminal or a file.*</doc>
-<msg timestamp="20230324 11:44:50.413" level="INFO">
+<msg timestamp="20230324 11:57:06.815" level="INFO">
 {
-    "seconds": 0.00614,
+    "seconds": 0.008556,
     "status": 201,
     "reason": "Created",
     "body": {
@@ -42,15 +42,15 @@
         "rentals": []
     },
     "headers": {
-        "date": "Fri, 24 Mar 2023 10:44:50 GMT",
+        "date": "Fri, 24 Mar 2023 10:57:05 GMT",
         "server": "uvicorn",
         "content-length": "21",
         "content-type": "application/json"
     }
 }</msg>
-<status status="PASS" starttime="20230324 11:44:50.413" endtime="20230324 11:44:50.417"/>
+<status status="PASS" starttime="20230324 11:57:06.814" endtime="20230324 11:57:06.826"/>
 </kw>
-<status status="PASS" starttime="20230324 11:44:50.397" endtime="20230324 11:44:50.417"/>
+<status status="PASS" starttime="20230324 11:57:06.793" endtime="20230324 11:57:06.826"/>
 </test>
 <test id="s1-s1-t2" name="POST to create a new film" line="13">
 <kw name="POST" library="REST">
@@ -58,56 +58,56 @@
 <arg>/home/greg/Programming/Git/test_repository_for_rental_store/atest/film_1.json</arg>
 <tag>http</tag>
 <doc>*Sends a POST request to the endpoint.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.418" endtime="20230324 11:44:50.426"/>
+<status status="PASS" starttime="20230324 11:57:06.827" endtime="20230324 11:57:06.832"/>
 </kw>
 <kw name="Integer" library="REST">
 <arg>response status</arg>
 <arg>201</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON integer.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.427" endtime="20230324 11:44:50.431"/>
+<status status="PASS" starttime="20230324 11:57:06.833" endtime="20230324 11:57:06.835"/>
 </kw>
 <kw name="Integer" library="REST">
 <arg>response body id</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON integer.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.432" endtime="20230324 11:44:50.435"/>
+<status status="PASS" starttime="20230324 11:57:06.836" endtime="20230324 11:57:06.839"/>
 </kw>
 <kw name="String" library="REST">
 <arg>response body title</arg>
 <arg>"IT"</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON string.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.435" endtime="20230324 11:44:50.437"/>
+<status status="PASS" starttime="20230324 11:57:06.840" endtime="20230324 11:57:06.845"/>
 </kw>
 <kw name="String" library="REST">
 <arg>response body type</arg>
 <arg>"Old"</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON string.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.438" endtime="20230324 11:44:50.445"/>
+<status status="PASS" starttime="20230324 11:57:06.846" endtime="20230324 11:57:06.852"/>
 </kw>
 <kw name="Integer" library="REST">
 <arg>response body items_total</arg>
 <arg>5</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON integer.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.445" endtime="20230324 11:44:50.451"/>
+<status status="PASS" starttime="20230324 11:57:06.853" endtime="20230324 11:57:06.856"/>
 </kw>
 <kw name="Integer" library="REST">
 <arg>response body available_items</arg>
 <arg>5</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON integer.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.452" endtime="20230324 11:44:50.456"/>
+<status status="PASS" starttime="20230324 11:57:06.858" endtime="20230324 11:57:06.865"/>
 </kw>
 <kw name="Output" library="REST">
 <arg>response</arg>
 <tag>I/O</tag>
 <doc>*Outputs JSON to terminal or a file.*</doc>
-<msg timestamp="20230324 11:44:50.456" level="INFO">
+<msg timestamp="20230324 11:57:06.866" level="INFO">
 {
-    "seconds": 0.004431,
+    "seconds": 0.00272,
     "status": 201,
     "reason": "Created",
     "body": {
@@ -118,15 +118,15 @@
         "available_items": 5
     },
     "headers": {
-        "date": "Fri, 24 Mar 2023 10:44:50 GMT",
+        "date": "Fri, 24 Mar 2023 10:57:05 GMT",
         "server": "uvicorn",
         "content-length": "70",
         "content-type": "application/json"
     }
 }</msg>
-<status status="PASS" starttime="20230324 11:44:50.456" endtime="20230324 11:44:50.457"/>
+<status status="PASS" starttime="20230324 11:57:06.865" endtime="20230324 11:57:06.868"/>
 </kw>
-<status status="PASS" starttime="20230324 11:44:50.418" endtime="20230324 11:44:50.458"/>
+<status status="PASS" starttime="20230324 11:57:06.827" endtime="20230324 11:57:06.868"/>
 </test>
 <test id="s1-s1-t3" name="POST to rent film by customer" line="23">
 <kw name="POST" library="REST">
@@ -134,22 +134,22 @@
 <arg>/home/greg/Programming/Git/test_repository_for_rental_store/atest/rent_request_1.json</arg>
 <tag>http</tag>
 <doc>*Sends a POST request to the endpoint.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.461" endtime="20230324 11:44:50.475"/>
+<status status="PASS" starttime="20230324 11:57:06.870" endtime="20230324 11:57:06.875"/>
 </kw>
 <kw name="Integer" library="REST">
 <arg>response status</arg>
 <arg>200</arg>
 <tag>assertions</tag>
 <doc>*Asserts the field as JSON integer.*</doc>
-<status status="PASS" starttime="20230324 11:44:50.476" endtime="20230324 11:44:50.483"/>
+<status status="PASS" starttime="20230324 11:57:06.876" endtime="20230324 11:57:06.882"/>
 </kw>
 <kw name="Output" library="REST">
 <arg>response</arg>
 <tag>I/O</tag>
 <doc>*Outputs JSON to terminal or a file.*</doc>
-<msg timestamp="20230324 11:44:50.486" level="INFO">
+<msg timestamp="20230324 11:57:06.885" level="INFO">
 {
-    "seconds": 0.007382,
+    "seconds": 0.002755,
     "status": 200,
     "reason": "OK",
     "body": {
@@ -162,29 +162,84 @@
         ]
     },
     "headers": {
-        "date": "Fri, 24 Mar 2023 10:44:50 GMT",
+        "date": "Fri, 24 Mar 2023 10:57:06 GMT",
         "server": "uvicorn",
         "content-length": "62",
         "content-type": "application/json"
     }
 }</msg>
-<status status="PASS" starttime="20230324 11:44:50.484" endtime="20230324 11:44:50.489"/>
+<status status="PASS" starttime="20230324 11:57:06.883" endtime="20230324 11:57:06.887"/>
 </kw>
-<status status="PASS" starttime="20230324 11:44:50.459" endtime="20230324 11:44:50.490"/>
+<status status="PASS" starttime="20230324 11:57:06.869" endtime="20230324 11:57:06.888"/>
 </test>
-<status status="PASS" starttime="20230324 11:44:50.200" endtime="20230324 11:44:50.493"/>
+<test id="s1-s1-t4" name="GET customer to check their Rentals" line="28">
+<kw name="GET" library="REST">
+<arg>/customers/0</arg>
+<tag>http</tag>
+<doc>*Sends a GET request to the endpoint.*</doc>
+<status status="PASS" starttime="20230324 11:57:06.889" endtime="20230324 11:57:06.903"/>
+</kw>
+<kw name="Integer" library="REST">
+<arg>response status</arg>
+<arg>200</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON integer.*</doc>
+<status status="PASS" starttime="20230324 11:57:06.904" endtime="20230324 11:57:06.907"/>
+</kw>
+<kw name="Array" library="REST">
+<arg>response body rentals</arg>
+<tag>assertions</tag>
+<doc>*Asserts the field as JSON array.*</doc>
+<status status="PASS" starttime="20230324 11:57:06.908" endtime="20230324 11:57:06.915"/>
+</kw>
+<kw name="Output" library="REST">
+<arg>response</arg>
+<tag>I/O</tag>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<msg timestamp="20230324 11:57:06.917" level="INFO">
+{
+    "seconds": 0.006654,
+    "status": 200,
+    "reason": "OK",
+    "body": {
+        "id": 0,
+        "rentals": [
+            {
+                "request_id": "dffc8f9a-fcc4-4747-a492-549eb4d8b67e",
+                "customer_id": 0,
+                "film_id": 0,
+                "date_of_rent": "2023-03-24",
+                "up_front_days": 2,
+                "charge": 150,
+                "date_of_return": null,
+                "surcharge": null
+            }
+        ]
+    },
+    "headers": {
+        "date": "Fri, 24 Mar 2023 10:57:06 GMT",
+        "server": "uvicorn",
+        "content-length": "200",
+        "content-type": "application/json"
+    }
+}</msg>
+<status status="PASS" starttime="20230324 11:57:06.916" endtime="20230324 11:57:06.918"/>
+</kw>
+<status status="PASS" starttime="20230324 11:57:06.888" endtime="20230324 11:57:06.918"/>
+</test>
+<status status="PASS" starttime="20230324 11:57:06.602" endtime="20230324 11:57:06.919"/>
 </suite>
-<status status="PASS" starttime="20230324 11:44:50.184" endtime="20230324 11:44:50.497"/>
+<status status="PASS" starttime="20230324 11:57:06.585" endtime="20230324 11:57:06.920"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Atest">Atest</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Rental Store Tests">Atest.Rental Store Tests</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Atest">Atest</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="Rental Store Tests">Atest.Rental Store Tests</stat>
 </suite>
 </statistics>
 <errors>

@@ -24,3 +24,9 @@ POST to rent film by customer
     POST        /films/rent                     ${CURDIR}/rent_request_1.json
     Integer     response status                 200
     Output      response
+
+GET customer to check their Rentals
+    GET         /customers/0
+    Integer     response status                 200
+    Array       response body rentals
+    Output      response
