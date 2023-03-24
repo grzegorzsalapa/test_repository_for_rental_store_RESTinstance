@@ -1,0 +1,9 @@
+{
+  "customer_id": 0,
+  "rented_films": [
+    {
+      "film_id": 0,
+      "up_front_days": 2
+    }
+  ]
+}
